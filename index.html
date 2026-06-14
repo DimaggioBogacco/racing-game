@@ -412,11 +412,12 @@
         requestAnimationFrame(animate);
 
         // Speed Handling Linear calculations
+        // (Reduced for easier control) ---
         if (inputGas) {
-          speed += 0.5;
-          if (speed > maxSpeed) speed = maxSpeed;
+          speed += 0.2; // Was 0.5 - Slower acceleration
+          if (speed > 35) speed = 35; // Was 60 - Much lower top speed
         } else {
-          speed -= 0.3;
+          speed -= 0.15; // Was 0.3 - Slower natural deceleration
           if (speed < 0) speed = 0;
         }
 
