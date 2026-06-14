@@ -423,7 +423,7 @@
 
         // Apply steering transformations based on forward speed
         if (speed > 1) {
-          playerCar.position.x += inputSteer * 0.5 * (speed / maxSpeed);
+          playerCar.position.x += inputSteer * 1 * (speed / maxSpeed);
           // Subtle frame banking rotation effect
           playerCar.rotation.y = -inputSteer * 0.1;
           playerCar.rotation.z = -inputSteer * 0.05;
